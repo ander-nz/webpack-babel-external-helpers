@@ -1,0 +1,13 @@
+{
+  "name": "webpack-babel-external-helpers",
+  "version": "0.9.0",
+  "repository": "ander-nz/webpack-babel-external-helpers",
+  "author": "Shane S. Anderson <s@ander.nz>",
+  "description": "Generates Babel 6's external helpers, then adds them to the Webpack compilation unit.",
+  "keywords": [
+    "babel",
+    "webpack",
+    "babel-plugin-external-helpers"
+  ],
+  "license": "MIT"
+}
