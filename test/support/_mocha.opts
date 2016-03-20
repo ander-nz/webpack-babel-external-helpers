@@ -1,7 +1,8 @@
 --compilers coffee:coffee-script/register
---reporter dot
+--reporter spec
 --require test/support/boot
 --require test/support/helpers
+--slow -1
 
 test/support/*.js
 test/*.coffee

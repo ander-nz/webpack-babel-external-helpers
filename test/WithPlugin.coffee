@@ -1,4 +1,4 @@
-describe "WebPack+Babel - using this plugin -", ->
+describe "[WithPlugin] WebPack/Babel with this plugin -", ->
   it "will not reference a local helper", ->
     webpack_with_plugin "class MyObject { }"
     .should.eventually.not.match /_classCallCheck/
