@@ -9,16 +9,16 @@ const BABEL_LOADER = {
 }
 
 const WEBPACK_PLUGINLESS = {
-  entry: tmp.INPUT_PATH,
+  entry: [tmp.INPUT_PATH],
   output: { filename: tmp.OUTPUT_PATH },
   module: { loaders: [BABEL_LOADER] },
 }
 
 const WEBPACK_WITHPLUGIN = {
-  entry: tmp.INPUT_PATH,
+  entry: [tmp.INPUT_PATH],
   output: { filename: tmp.OUTPUT_PATH },
   module: { loaders: [BABEL_LOADER] },
-  plugins: [new BabelExternalHelpers()],
+  plugins: [new BabelExternalHelpers("*")],
 }
 
 global.webpack_pluginless = function(srcInput) {
