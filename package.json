@@ -8,6 +8,8 @@
   "version": "0.1.0",
   
   "dependencies": {
+    "babel-plugin-external-helpers": "6.5.0",
+    "val-loader": "0.5.0"
   },
   
   "devDependencies": {
