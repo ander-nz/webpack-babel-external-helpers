@@ -25,7 +25,14 @@
     "mocha": "2.4.5",
     "webpack": "1.12.14"
   },
+
+  "main": "src/index.js",
   
+  "peerDependencies": {
+    "babel-core": ">=6.0.0",
+    "webpack": ">=1.0.0"
+  },
+    
   "scripts": {
     "test": "mocha --opts test/support/_mocha.opts"
   }
