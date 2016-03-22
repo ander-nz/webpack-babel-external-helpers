@@ -1,5 +1,5 @@
 const tmp = require("./tmp-helpers")
-const webpack = require("./webpack-helpers")
+const webpackAsPromised = require("./webpack-as-promised")
 const BabelExternalHelpers = require("../../src/index.js")
 
 const BABEL_LOADER = {
@@ -24,11 +24,11 @@ const WEBPACK_WITHPLUGIN = {
 global.webpack_pluginless = function(srcInput) {
   tmp.cleanup()
   tmp.writeInputSync(srcInput)
-  return webpack.as_promise(WEBPACK_PLUGINLESS).then(tmp.readOutputSync)
+  return webpackAsPromised(WEBPACK_PLUGINLESS).then(tmp.readOutputSync)
 }
 
 global.webpack_with_plugin = function(srcInput) {
   tmp.cleanup()
   tmp.writeInputSync(srcInput)
-  return webpack.as_promise(WEBPACK_WITHPLUGIN).then(tmp.readOutputSync)
+  return webpackAsPromised(WEBPACK_WITHPLUGIN).then(tmp.readOutputSync)
 }
