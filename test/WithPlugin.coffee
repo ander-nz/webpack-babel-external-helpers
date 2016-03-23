@@ -1,16 +1,20 @@
-describe "[WithPlugin] WebPack/Babel with this plugin -", ->
+describe "[WithPlugin] WebPack/Babel with this plugin", ->
   it "will not reference a local helper", ->
-    webpack_with_plugin "class MyObject { }"
-    .should.eventually.not.match /_classCallCheck/
+    givenWebpackWith config.withPlugin
+      .theOutputOf "class MyObject { }"
+      .should.eventually.not.match /_classCallCheck/
   
   it "will declare the common helpers container", ->
-    webpack_with_plugin "class MyObject { }"
-    .should.eventually.match /global\.babelHelpers = \{\}/
+    givenWebpackWith config.withPlugin
+      .theOutputOf "class MyObject { }"
+      .should.eventually.match /global\.babelHelpers = \{\}/
 
   it "will declare the common helper", ->
-    webpack_with_plugin "class MyObject { }"
-    .should.eventually.match /babelHelpers\.classCallCheck = function \(/
+    givenWebpackWith config.withPlugin
+      .theOutputOf "class MyObject { }"
+      .should.eventually.match /babelHelpers\.classCallCheck = function \(/
 
   it "will use the common helper", ->
-    webpack_with_plugin "class MyObject { }"
-    .should.eventually.match /babelHelpers\.classCallCheck\(this, MyObject\);/
+    givenWebpackWith config.withPlugin
+      .theOutputOf "class MyObject { }"
+      .should.eventually.match /babelHelpers\.classCallCheck\(this, MyObject\);/
