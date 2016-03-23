@@ -27,5 +27,4 @@ function WebpackError(stats) {
 }
 
 module.exports = webpackAsPromised
-exports.default = exports
 exports.WebpackError = WebpackError
