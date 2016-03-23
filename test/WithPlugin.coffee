@@ -1,4 +1,4 @@
-describe "[WithPlugin] WebPack/Babel with this plugin -", ->
+describe "[WithPlugin] WebPack/Babel with this plugin", ->
   it "will not reference a local helper", ->
     givenWebpackWith config.withPlugin
       .theOutputOf "class MyObject { }"
