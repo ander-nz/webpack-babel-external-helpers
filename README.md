@@ -1,3 +1,6 @@
+# No longer maintained!
+This repository exists only as a reference.
+
 # Webpack Babel External Helpers
 Generates Babel 6's external helpers, then adds them to the Webpack compilation unit.
 
@@ -6,7 +9,7 @@ Generates Babel 6's external helpers, then adds them to the Webpack compilation 
 > This plugin has not yet been written to handle a variety of webpack configs.
 > See the issues list and the usage example for more information.
 
-##Usage
+## Usage
 Installation:
 ```sh
 npm install --save-dev webpack-babel-external-helpers
